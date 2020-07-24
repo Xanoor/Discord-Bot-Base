@@ -22,8 +22,8 @@ fs.readdir('./commands/', (err, files) => {
     });
 })
 
-fs.readdir("./events/", (error, f) => {
-    if (error) console.error
+fs.readdir("./events/", (err, f) => {
+    if (err) console.log(err)
     console.log(`${f.length} events loaded!`);
 
     f.forEach((f) => {
