@@ -41,7 +41,7 @@ client.login(config.token)
 client.on('message', async message => {
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
-
+    if (message.content.startsWith(prefix.length)) return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = message.content.substring(prefix.length).split(" ");
