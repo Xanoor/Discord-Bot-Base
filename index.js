@@ -43,7 +43,7 @@ client.on('message', async message => {
     if (message.channel.type === 'dm') return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
-    if (message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(prefix)) return;
     let args = message.content.substring(prefix.length).split(" ");
 
     let commandeFile = client.commands.get(cmd.slice(prefix.length));
