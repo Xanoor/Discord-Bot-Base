@@ -1,9 +1,10 @@
-const Discord = require('discord.js')
+const { SlashCommandBuilder } = require("discord.js");
 
-module.exports.run = async(client, message, args) => {
-    "YOUR CODE"
-}
-
-module.exports.cmd = {
-    name: 'CMD_NAME'
-}
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName("CMD_NAME")
+        .setDescription("Custom message!"),
+    async execute(interaction) {
+        "YOUR_CODE"
+    },
+};
